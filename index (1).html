@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS-Week2-HW</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1 id="top">JS-Week2-HW</h1>
+  </header>
+
+  <main>
+    <p>Pedicabo ego vos et irrumabo</p>
+    
+    <div id="image">
+      Hover over an image below to display here
+    </div>
+      
+    
+    <div class = "grid">
+        <figure>
+        <img src="Palafin-Hero(s).jpg" alt="S.H-Palafin" onmouseover="upDate(this)" onmouseleave="unDo()">
+        <figcaption>Shiny Palafin Hero Form</figcaption>
+        </figure>
+        <figure>
+        <img src="Palafin-Hero.jpg" alt="H-Palafin" onmouseover="upDate(this)" onmouseleave="unDo()">
+        <figcaption>Palafin Hero Form</figcaption>
+        </figure>
+        <figure>
+        <img src="Palafin-Zero(s).jpg" alt="S.Z-Palafin" onmouseover="upDate(this)" onmouseleave="unDo()">
+        <figcaption>Shiny Palafin Zero Form</figcaption>
+        </figure>
+        <figure>
+        <img src="Palafin-Zero.jpg" alt="Z-Palafin" onmouseover="upDate(this)" onmouseleave="unDo()">
+        <figcaption>Palafin Zero Form</figcaption>
+        </figure>
+        <figure>
+        <img src="finizen.jpg" alt="Finizen" onmouseover="upDate(this)" onmouseleave="unDo()">
+        <figcaption>Finizen</figcaption>
+        </figure>
+        <figure>
+        <img src="images.jpg" alt="Cool H-Palafin" onmouseover="upDate(this)" onmouseleave="unDo()">
+        <figcaption>Hero Palafin in Pokémon Horizons:The Series</figcaption>
+        </figure>
+        <figure>
+        <img src="Palafin_anime.png" alt="Cute Z-Palafin" onmouseover="upDate(this)" onmouseleave="unDo()">
+        <figcaption>Zero Palafin in Pokémon Horizons:The Series</figcaption>
+        </figure>
+    </div>
+  </main>
+
+  <footer>
+    <a href="#top">Jump to the Top</a>
+  </footer>
+</body>
+
+<script>
+  function upDate(previewPic) {
+      console.log("Event triggered for image hover");
+      console.log("Alt text:", previewPic.alt);
+      console.log("Image source:", previewPic.src);
+
+      document.getElementById("image").innerHTML = previewPic.alt;
+      document.getElementById("image").style.backgroundImage = "url('" + previewPic.src + "')";
+  }
+
+  function unDo() {
+      document.getElementById("image").style.backgroundImage = "url('')";
+      document.getElementById("image").innerHTML = "Hover over an image below to display here.";
+  }
+</script>
+  
+</html>
