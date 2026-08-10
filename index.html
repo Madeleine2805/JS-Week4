@@ -5,13 +5,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JS-Week2-HW</title>
+  <title>JS-Week4-HW</title>
   <link rel="stylesheet" href="style.css">
+  <script src="gallery.js" defer></script>
 </head>
 
 <body>
   <header>
-    <h1 id="top">JS-Week2-HW</h1>
+    <h1 id="top">JS-Week4-HW</h1>
   </header>
 
   <main>
@@ -59,20 +60,4 @@
   </footer>
 </body>
 
-<script>
-  function upDate(previewPic) {
-      console.log("Event triggered for image hover");
-      console.log("Alt text:", previewPic.alt);
-      console.log("Image source:", previewPic.src);
-
-      document.getElementById("image").innerHTML = previewPic.alt;
-      document.getElementById("image").style.backgroundImage = "url('" + previewPic.src + "')";
-  }
-
-  function unDo() {
-      document.getElementById("image").style.backgroundImage = "url('')";
-      document.getElementById("image").innerHTML = "Hover over an image below to display here.";
-  }
-</script>
-  
 </html>
